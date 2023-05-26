@@ -7,7 +7,7 @@ let weatherData = null;
 fetch(apiUrl)
   .then((response) => response.json())
   .then((weatherData) => {
-    console.log(weatherData)
+    console.log(weatherData.main.temp, weatherData.weather[0].main)
   });
 
 console.log('Requesting weather data');
