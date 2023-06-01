@@ -20,11 +20,11 @@ client1.fetchWeatherData('Bournemouth').then ((weatherData) => {
 client2 = new WeatherClient();
 client2.fetchWeatherData('Bristol').then ((weatherData) => {
   console.log(`Weather data for ${weatherData.name}:`)
-  console.log(weatherData);
+  console.table(weatherData.weather);
 });
 
 client3 = new WeatherClient();
 client3.fetchWeatherData('Beirut').then ((weatherData) => {
   console.log(`Weather data for ${weatherData.name}:`)
-  console.log(weatherData);
+  console.log(weatherData.weather[0].main);
 });
